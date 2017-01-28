@@ -5,10 +5,10 @@ const router = express.Router();
 const app = express();
 const port = 3000;
 
+app.use(express.static(__dirname + '/images'));
 
 router.get('/' , (req,res) => {
     res.sendFile(__dirname + '/index.html');
-    
 });
 
 router.get('/about', (req,res) => {
